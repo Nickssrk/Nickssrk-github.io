@@ -1,0 +1,147 @@
+/* CSS untuk style12.css */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Menggunakan font Roboto sebagai default */
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.container input [type="submit"] {
+    width: 150px;
+    padding: 10px;
+    background-color: #141414;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif; 
+
+}
+
+nav {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: #343a40;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Menggunakan font Montserrat untuk judul */
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-item h2 {
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif; /* Menggunakan font Montserrat untuk judul */
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif; /* Menggunakan font Roboto sebagai default */
+}
+
+.checkout-button input[type="submit"] {
+    width: 150px;
+    padding: 10px;
+    background-color: #f7e6e6;
+    color: #7c4646;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif; /* Menggunakan font Roboto sebagai default */
+}
+
+.checkout-button input[type="submit"]:hover {
+    background-color: #e64a00;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#checkmark {
+    display: none;
+    position: relative;
+    top: 5px; /* Sesuaikan posisi vertikal */
+    left: 10px; /* Sesuaikan posisi horizontal */
+}
+
+#checkmark:after {
+    content: '\2713';
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    animation: checkmarkAnim 0.5s ease forwards;
+}
+
+@keyframes checkmarkAnim {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.checkout-button,
+.reset-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.checkout-button input[type="submit"],
+.reset-button input[type="submit"] {
+    width: 150px;
+    padding: 10px;
+    background-color: #c42424;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.checkout-button input[type="submit"]:hover,
+.reset-button input[type="submit"]:hover {
+    background-color: #e64a00;
+}
