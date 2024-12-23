@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        h1 {
+            color: #343a40;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #23272b;
+        }
+        #message-sent {
+        display: none;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #message-sent p {
+        margin-bottom: 10px;
+    }
+
+    #message-sent span {
+        font-weight: bold;
+        color: #333;
+    }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="Operator.php">Operator</a> |
+        <a href="kontak.html">Contact</a> |
+        <a href="about.html">About me</a> |
+        <a href="absen.php">Cinema</a> |
+    </nav>
+    <div>
+        <h1>Contact Me</h1>
+        <form method="post" action="#">
+            <label for="email">Email</label><br />
+            <input type="email" name="email" placeholder="Enter your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email address" />
+            <br />
+            <label for="message">Message</label><br />
+            <textarea name="message" placeholder="Write your message..." rows="4" required></textarea>
+            <br />
+            <br />
+            <input type="submit" value="Send" />
+        </form>
+    </div>
+    <div id="message-sent" style="display: none;">
+        <p>Pesan Berhasil di kirimkan!</p>
+        <p>Email: <span id="sent-email"></span></p>
+        <p>Message: <span id="sent-message"></span></p>
+    </div>
+    <form method="post" action="#" id="contact-form"></form>
+    
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Menghentikan pengiriman formulir bawaan
+    
+            // Mendapatkan nilai email dan pesan dari formulir
+            var email = document.querySelector('input[name="email"]').value;
+            var message = document.querySelector('textarea[name="message"]').value;
+    
+            // Menampilkan pesan terkirim
+            document.getElementById('message-sent').style.display = 'block';
+            document.getElementById('sent-email').textContent = email;
+            document.getElementById('sent-message').textContent = message;
+    
+            // Mengosongkan formulir
+            document.querySelector('form').reset();
+        });
+    </script>
+    <hr>
+    <footer>
+        <p>Copyright &copy; 2024 Zavrel.cop.</p>
+    </footer>
+</body>
+
+</html>
